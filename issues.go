@@ -19,7 +19,7 @@ type Issue struct {
 	Url         string     `xml:"url,attr"`
 	Urls        string     `xml:"urls,attr"`
 	QuickFix    string     `xml:"quickfix,attr"`
-	Location    []Location `xml:"location"`
+	Locations   []Location `xml:"location"`
 }
 
 type LintReport struct {

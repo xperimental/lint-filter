@@ -53,8 +53,9 @@ func main() {
 
 	filteredIssues := make([]Issue, 0, len(lintReport.Issues))
 	for _, i := range lintReport.Issues {
-		if filterConfig.Filter(&i) == FilterResultInclude {
-			filteredIssues = append(filteredIssues, i)
+		issue, err := filterConfig.Filter(i)
+		if err == nil {
+			filteredIssues = append(filteredIssues, issue)
 		}
 	}
 	fmt.Printf("issues after filter: %d\n", len(filteredIssues))

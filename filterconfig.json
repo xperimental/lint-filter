@@ -1,8 +1,8 @@
 {
     "default" : true,
-    "excludes" : [
-        {
-            "pathPrefix": "target/"
-        }
-    ]
+    "locationFilters" : {
+        "excludes" : [
+            {"pathPrefix" : "target/"}
+        ]
+    }
 }
