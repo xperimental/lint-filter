@@ -1,0 +1,8 @@
+{
+    "default" : true,
+    "excludes" : [
+        {
+            "pathPrefix": "target/"
+        }
+    ]
+}
